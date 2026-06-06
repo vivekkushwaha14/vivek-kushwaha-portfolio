@@ -1,36 +1,65 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# Vivek Kushwaha Portfolio
+
+A production-ready, modern personal portfolio website built with Next.js 15, React, Tailwind CSS, and Framer Motion.
+
+## Features
+
+- **Dark Theme:** Sleek and professional appearance by default.
+- **Modern UI:** Glassmorphism effects, clean typography, and subtle gradients.
+- **Responsive:** Mobile-first design that works perfectly on all devices.
+- **Animated:** Smooth scroll-reveal and hover animations using Framer Motion.
+- **Performance:** Optimized for speed using Next.js Server Components.
+- **SEO Ready:** Proper metadata and semantic HTML.
+
+## Tech Stack
+
+- **Framework:** Next.js 15 (App Router)
+- **Styling:** Tailwind CSS (v4)
+- **Animations:** Framer Motion
+- **Icons:** Lucide React
+- **Language:** JavaScript (React.js)
 
 ## Getting Started
 
-First, run the development server:
+1.  **Clone the repository:**
+    ```bash
+    git clone <repository-url>
+    cd portfolio
+    ```
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+2.  **Install dependencies:**
+    ```bash
+    npm install
+    ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+3.  **Run the development server:**
+    ```bash
+    npm run dev
+    ```
 
-You can start editing the page by modifying `app/page.js`. The page auto-updates as you edit the file.
+4.  **Open in browser:**
+    Navigate to [http://localhost:3000](http://localhost:3000)
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+## Folder Structure
 
-## Learn More
+- `app/`: Contains the App Router pages and layouts.
+- `app/components/`: Reusable UI components and page sections.
+- `app/data/`: Portfolio content (edit `portfolio.js` to change info).
+- `app/lib/`: Utility functions.
+- `public/`: Static assets (images, icons, etc.).
 
-To learn more about Next.js, take a look at the following resources:
+## Customization
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+To update the content, simply modify the `app/data/portfolio.js` file. It contains all the text, links, and skill lists shown on the website.
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+## Deployment on Vercel
 
-## Deploy on Vercel
+The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new).
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+1.  Push your code to a GitHub repository.
+2.  Import your repository into Vercel.
+3.  Vercel will automatically detect Next.js and deploy your project.
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+## License
+
+This project is licensed under the MIT License.
