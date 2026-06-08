@@ -8,6 +8,7 @@ import Certificates from "./components/sections/Certificates";
 import Contact from "./components/sections/Contact";
 import Footer from "./components/sections/Footer";
 
+
 export default function Home() {
   return (
     <main className="bg-background text-text overflow-hidden">

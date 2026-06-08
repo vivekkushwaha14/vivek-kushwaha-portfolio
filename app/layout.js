@@ -1,7 +1,7 @@
 import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
 import { developerInfo } from "./data/portfolio";
-
+import { Analytics } from "@vercel/analytics/next"
 const geistSans = Geist({
   variable: "--font-geist-sans",
   subsets: ["latin"],
@@ -22,7 +22,7 @@ export const metadata = {
     description: developerInfo.tagline,
     type: "website",
     locale: "en_US",
-    url: "https://vivekkushwaha.dev", // Placeholder
+    url: "https://vivekkushwaha14-vivek-kushwaha-port.vercel.app", // Placeholder
     siteName: `${developerInfo.name} Portfolio`,
   },
 };
@@ -34,6 +34,7 @@ export default function RootLayout({ children }) {
         className={`${geistSans.variable} ${geistMono.variable} antialiased selection:bg-accent/30 selection:text-accent`}
       >
         {children}
+        <Analytics />
       </body>
     </html>
   );
