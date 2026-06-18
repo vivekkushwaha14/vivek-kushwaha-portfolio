@@ -127,14 +127,14 @@ const ProjectCard = ({ project, index, onImageClick }) => {
 
         {/* Action Buttons */}
         <div className="flex items-center gap-4 pt-4 border-t border-accent/10">
-          {project.liveUrl !== "#" && (
+          {project.getApk && (
             <a
-              href={project.liveUrl}
+              href={project.getApk}
               target="_blank"
               rel="noopener noreferrer"
               className="flex-1 text-center py-3 bg-accent text-background rounded-xl font-bold text-sm hover:opacity-90 transition-opacity flex items-center justify-center gap-2"
             >
-              Live Demo <ExternalLink size={16} />
+              Get APK <ExternalLink size={16} />
             </a>
           )}
           <a

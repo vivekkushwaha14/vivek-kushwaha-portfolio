@@ -57,7 +57,7 @@ export const projects = [
     description: "A modern expense tracking application built using React Native and Expo for managing daily expenses and income.",
     features: ["Add expenses", "Categorize transactions", "Expense summary", "Responsive mobile UI"],
     tech: ["React Native", "Expo"],
-    liveUrl: null,
+    getApk: "https://expo.dev/accounts/vivek_14/projects/expense-tracker/builds/eee6b934-152f-4e78-a93a-7e733cf55d2f",
     githubUrl: "https://github.com/vivekkushwaha14/Expense-Tracker",
     image: "/expense-tracker/dashboard.png",
     images: [
