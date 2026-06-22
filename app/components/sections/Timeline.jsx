@@ -9,15 +9,15 @@ const Timeline = () => {
     <SectionWrapper id="journey" title="Learning Journey" subtitle="My path as a developer so far.">
       <div className="relative max-w-4xl mx-auto">
         {/* Central Line */}
-        <div className="absolute left-0 md:left-1/2 top-0 bottom-0 w-px bg-accent/20 -translate-x-1/2 hidden md:block" />
-        <div className="absolute left-4 top-0 bottom-0 w-px bg-accent/20 md:hidden" />
+        <div className="absolute left-0 md:left-1/2 top-0 bottom-0 w-px bg-white/[0.12] -translate-x-1/2 hidden md:block" />
+        <div className="absolute left-4 top-0 bottom-0 w-px bg-white/[0.12] md:hidden" />
 
         <div className="space-y-12">
           {timeline.map((item, index) => (
             <motion.div
               key={index}
-              initial={{ opacity: 0, x: index % 2 === 0 ? -50 : 50 }}
-              whileInView={{ opacity: 1, x: 0 }}
+              initial={{ opacity: 0, y: 16 }}
+              whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0.6 }}
               className={`relative flex items-center justify-between w-full mb-8 ${
@@ -28,12 +28,12 @@ const Timeline = () => {
 
               {/* Dot */}
               <div className="absolute left-4 md:left-1/2 w-8 h-8 bg-background border-4 border-accent rounded-full -translate-x-1/2 z-10 flex items-center justify-center">
-                 <div className="w-2 h-2 bg-accent rounded-full animate-ping" />
+                 <div className="w-2 h-2 bg-accent rounded-full" />
               </div>
 
               {/* Card */}
               <div className="w-full md:w-5/12 pl-12 md:pl-0">
-                <div className={`glass-card p-6 rounded-3xl relative ${
+                <div className={`glass-card p-6 rounded-2xl relative ${
                   index % 2 === 0 ? "md:text-left" : "md:text-right"
                 }`}>
                   <span className="text-accent font-black text-xl mb-1 block">
@@ -46,12 +46,6 @@ const Timeline = () => {
                     {item.description}
                   </p>
                   
-                  {/* Triangle Arrow */}
-                  <div className={`absolute top-6 hidden md:block w-0 h-0 border-y-[10px] border-y-transparent ${
-                    index % 2 === 0 
-                      ? "left-full border-l-[15px] border-l-secondary" 
-                      : "right-full border-r-[15px] border-r-secondary"
-                  }`} />
                 </div>
               </div>
             </motion.div>
