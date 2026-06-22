@@ -49,8 +49,8 @@ const Contact = () => {
       <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">
         {/* Contact Info */}
         <motion.div
-          initial={{ opacity: 0, y: 16 }}
-          whileInView={{ opacity: 1, y: 0 }}
+          initial={{ opacity: 0, x: -30 }}
+          whileInView={{ opacity: 1, x: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.6 }}
           className="space-y-8"
@@ -113,19 +113,19 @@ const Contact = () => {
 
         {/* Contact Form */}
         <motion.div
-          initial={{ opacity: 0, y: 16 }}
-          whileInView={{ opacity: 1, y: 0 }}
+          initial={{ opacity: 0, x: 30 }}
+          whileInView={{ opacity: 1, x: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.6 }}
-          className="glass-card p-8 rounded-2xl relative overflow-hidden"
+          className="glass-card p-8 rounded-3xl relative overflow-hidden"
         >
           <AnimatePresence mode="wait">
             {formState === "success" ? (
               <motion.div
                 key="success"
-                initial={{ opacity: 0, y: 8 }}
-                animate={{ opacity: 1, y: 0 }}
-                exit={{ opacity: 0, y: 8 }}
+                initial={{ opacity: 0, scale: 0.9 }}
+                animate={{ opacity: 1, scale: 1 }}
+                exit={{ opacity: 0, scale: 0.9 }}
                 className="h-full flex flex-col items-center justify-center text-center py-12 space-y-4"
               >
                 <div className="w-20 h-20 bg-green-500/10 text-green-500 rounded-full flex items-center justify-center">
@@ -166,7 +166,7 @@ const Contact = () => {
                       required
                       type="text"
                       placeholder="Your Name"
-                      className="w-full bg-background/60 border border-white/[0.08] rounded-lg px-5 py-4 text-text placeholder:text-muted/50 focus:border-accent outline-none transition-colors"
+                      className="w-full bg-white/50 border border-accent/10 rounded-xl px-5 py-4 text-text placeholder:text-muted/50 focus:border-accent outline-none transition-colors"
                     />
                   </div>
                   <div className="space-y-2">
@@ -182,7 +182,7 @@ const Contact = () => {
                       required
                       type="email"
                       placeholder="Your Email"
-                      className="w-full bg-background/60 border border-white/[0.08] rounded-lg px-5 py-4 text-text placeholder:text-muted/50 focus:border-accent outline-none transition-colors"
+                      className="w-full bg-white/50 border border-accent/10 rounded-xl px-5 py-4 text-text placeholder:text-muted/50 focus:border-accent outline-none transition-colors"
                     />
                   </div>
                 </div>
@@ -199,13 +199,13 @@ const Contact = () => {
                     required
                     rows={5}
                     placeholder="How can I help you?"
-                    className="w-full bg-background/60 border border-white/[0.08] rounded-lg px-5 py-4 text-text placeholder:text-muted/50 focus:border-accent outline-none transition-colors resize-none"
+                    className="w-full bg-white/50 border border-accent/10 rounded-xl px-5 py-4 text-text placeholder:text-muted/50 focus:border-accent outline-none transition-colors resize-none"
                   />
                 </div>
                 <button
                   type="submit"
                   disabled={formState === "loading"}
-                  className="w-full bg-accent text-background font-semibold py-4 rounded-lg flex items-center justify-center gap-2 hover:bg-[#2dd4bf] transition-colors disabled:opacity-50"
+                  className="w-full bg-accent text-background font-black py-4 rounded-xl flex items-center justify-center gap-2 hover:opacity-90 transition-opacity disabled:opacity-50"
                 >
                   {formState === "loading" ? "Sending..." : "Send Message"}
                   <Send

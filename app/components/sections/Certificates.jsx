@@ -29,7 +29,7 @@ export default function Certificates() {
               viewport={{ once: true }}
               transition={{ duration: 0.4 }}
               onClick={() => setSelectedCert(cert)}
-              className="glass-card rounded-2xl overflow-hidden cursor-pointer group hover:-translate-y-1"
+              className="glass-card rounded-3xl overflow-hidden cursor-pointer group hover:scale-[1.02] transition"
             >
               {" "}
               <div className="relative h-56 w-full">
@@ -42,7 +42,7 @@ export default function Certificates() {
                 />{" "}
               </div>
               <div className="p-6">
-                <div className="mb-4 inline-flex p-3 rounded-lg bg-accent/10 text-accent">
+                <div className="mb-4 inline-flex p-3 rounded-xl bg-accent/10 text-accent">
                   <Award size={24} />
                 </div>
 
@@ -61,7 +61,7 @@ export default function Certificates() {
       <AnimatePresence>
         {selectedCert && (
           <motion.div
-            className="fixed inset-0 z-[9999] bg-black/85 flex items-center justify-center p-4"
+            className="fixed inset-0 z-[9999] bg-black/80 backdrop-blur-sm flex items-center justify-center p-4"
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             exit={{ opacity: 0 }}
@@ -69,9 +69,9 @@ export default function Certificates() {
           >
             <motion.div
               className="relative max-w-5xl w-full"
-              initial={{ opacity: 0, y: 12 }}
-              animate={{ opacity: 1, y: 0 }}
-              exit={{ opacity: 0, y: 12 }}
+              initial={{ scale: 0.9 }}
+              animate={{ scale: 1 }}
+              exit={{ scale: 0.9 }}
               onClick={(e) => e.stopPropagation()}
             >
               <button
