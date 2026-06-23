@@ -5,7 +5,7 @@ import { motion, AnimatePresence } from "framer-motion";
 import { developerInfo } from "@/app/data/portfolio";
 import { ArrowRight, Github, Linkedin, Mail } from "lucide-react";
 import SectionWrapper from "../ui/SectionWrapper";
-
+import Image from "next/image";
 
 const Hero = () => {
   const [roleIndex, setRoleIndex] = useState(0);
@@ -33,7 +33,7 @@ const Hero = () => {
               Full Stack Web Developer
             </div>
 
-            <p className="text-muted text-lg max-w-[700px] mt-7 leading-8">
+            <p className="text-muted text-lg max-w-[700px] mt-7 leading-8 font-semibold">
               {developerInfo.tagline} Focused on creating pixel-perfect, 
               responsive, and highly interactive user interfaces.
             </p>
@@ -92,17 +92,15 @@ const Hero = () => {
           transition={{ duration: 0.45, delay: 0.1 }}
           className="order-1 lg:order-2 flex justify-center lg:justify-end"
         >
-          <div className="relative w-64 h-64 md:w-80 md:h-80 lg:w-96 lg:h-96 bg-secondary border border-[#e5e7eb] rounded-2xl overflow-hidden flex items-center justify-center">
+          <div className="relative w-64 h-64 md:w-80 md:h-80 lg:w-96 lg:h-96 bg-secondary border border-[#8eabe4] rounded-2xl overflow-hidden flex items-center justify-center">
             {/* Profile Placeholder */}
-            <div className="absolute inset-5 bg-white rounded-xl border border-[#e5e7eb] flex items-center justify-center">
-               <span className="text-8xl md:text-9xl font-semibold tracking-tight text-text opacity-10 select-none">{"VK"}</span>
-               {/* When user adds real image: 
-               <Image src="/profile.jpg" fill className="object-cover" alt={developerInfo.name} /> 
-               */}
-            </div>
+            <div className="absolute inset-5 bg-white rounded-xl border border-[#84a7ee] flex items-center justify-center">
+               <span className="text-8xl md:text-9xl font-semibold tracking-tight text-text  select-none">{"</>"}</span>
+               {/* <Image src="/profile.png" fill className="object-cover" alt={developerInfo.name} />  */}
+               </div>
 
             {/* Floating Badges */}
-            <div className="absolute bottom-5 left-5 bg-white border border-[#e5e7eb] px-3 py-2 rounded-lg flex items-center gap-2">
+            <div className="absolute bottom-5 left-5 bg-white border border-[#dce2ee] px-3 py-2 rounded-lg flex items-center gap-2">
               <div className="w-2 h-2 bg-accent rounded-full" />
               <span className="text-xs font-bold text-text uppercase">Available Now</span>
             </div>
