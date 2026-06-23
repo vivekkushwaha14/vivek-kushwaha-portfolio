@@ -4,12 +4,7 @@ import { useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import Image from "next/image";
 import { projects } from "@/app/data/portfolio";
-import {
-  ExternalLink,
-  X,
-  ChevronLeft,
-  ChevronRight,
-} from "lucide-react";
+import { ExternalLink, X, ChevronLeft, ChevronRight } from "lucide-react";
 import { GitHubSVG } from "../ui/Icons";
 import SectionWrapper from "../ui/SectionWrapper";
 
@@ -127,6 +122,17 @@ const ProjectCard = ({ project, index, onImageClick }) => {
 
         {/* Action Buttons */}
         <div className="flex items-center gap-3 pt-5 border-t border-[#e5e7eb]">
+          {project.liveUrl && (
+            <a
+              href={project.liveUrl}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="flex-1 text-center py-3 bg-text text-white rounded-lg font-semibold text-sm hover:bg-black/80 transition-colors flex items-center justify-center gap-2"
+            >
+              Live Demo <ExternalLink size={16} />
+            </a>
+          )}
+
           {project.getApk && (
             <a
               href={project.getApk}
@@ -137,11 +143,12 @@ const ProjectCard = ({ project, index, onImageClick }) => {
               Get APK <ExternalLink size={16} />
             </a>
           )}
+
           <a
             href={project.githubUrl}
             target="_blank"
             rel="noopener noreferrer"
-            className={`${project.liveUrl !== "#" ? "flex-1" : "w-full"} text-center py-3 border border-[#e5e7eb] rounded-lg font-semibold text-sm hover:border-text transition-colors flex items-center justify-center gap-2`}
+            className="flex-1 text-center py-3 border border-[#e5e7eb] rounded-lg font-semibold text-sm hover:border-text transition-colors flex items-center justify-center gap-2"
           >
             <GitHubSVG size={18} /> GitHub
           </a>
@@ -209,10 +216,10 @@ const Projects = () => {
             >
               {/* Previous */}
               <button
-              onClick={(e) => {
-  e.stopPropagation();
-  prevModalImage();
-}}
+                onClick={(e) => {
+                  e.stopPropagation();
+                  prevModalImage();
+                }}
                 className="absolute left-4 top-1/2 -translate-y-1/2 z-20 bg-text text-white p-3 rounded-full hover:bg-black/80 transition-colors"
               >
                 <ChevronLeft size={24} />
@@ -228,10 +235,10 @@ const Projects = () => {
 
               {/* Next */}
               <button
-               onClick={(e) => {
-  e.stopPropagation();
-  nextModalImage();
-}}
+                onClick={(e) => {
+                  e.stopPropagation();
+                  nextModalImage();
+                }}
                 className="absolute right-4 top-1/2 -translate-y-1/2 z-20 bg-text text-white p-3 rounded-full hover:bg-black/80 transition-colors"
               >
                 <ChevronRight size={24} />

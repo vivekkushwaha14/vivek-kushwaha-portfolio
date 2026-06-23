@@ -75,7 +75,7 @@ export const projects = [
     description: "A full-stack note-taking application with authentication and CRUD functionality.",
     features: ["User authentication", "Create notes", "Update notes", "Delete notes", "Secure backend"],
     tech: ["React", "Node.js", "Express", "MongoDB"],
-    liveUrl: null,
+    liveUrl: "https://inotebook-frontend-sable.vercel.app",
     githubUrl: "https://github.com/vivekkushwaha14/iNoteBook",
     image: "/inotebook/home.png",
     images: [
