@@ -2,11 +2,15 @@ import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
 import { developerInfo } from "./data/portfolio";
 import { Analytics } from "@vercel/analytics/next"
+import { Inter } from "next/font/google";
 const geistSans = Geist({
   variable: "--font-geist-sans",
   subsets: ["latin"],
 });
 
+const inter = Inter({
+  subsets: ["latin"],
+});
 const geistMono = Geist_Mono({
   variable: "--font-geist-mono",
   subsets: ["latin"],
@@ -31,7 +35,7 @@ export default function RootLayout({ children }) {
   return (
     <html lang="en" className="scroll-smooth">
       <body
-        className={`${geistSans.variable} ${geistMono.variable} antialiased selection:bg-accent/30 selection:text-accent`}
+        className={`${inter.className} antialiased selection:bg-accent/30 selection:text-accent`}
       >
         {children}
         <Analytics />

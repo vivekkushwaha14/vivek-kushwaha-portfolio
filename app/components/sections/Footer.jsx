@@ -12,11 +12,11 @@ const Footer = () => {
   };
 
   return (
-    <footer className="py-12 px-6 md:px-12 lg:px-24 border-t border-accent/10 relative overflow-hidden">
-      <div className="max-w-7xl mx-auto flex flex-col md:flex-row justify-between items-center gap-8 relative z-10">
+    <footer className="py-12 px-6 md:px-12 lg:px-24 border-t border-[#e5e7eb]">
+      <div className="max-w-7xl mx-auto flex flex-col md:flex-row justify-between items-center gap-8">
         {/* Brand */}
         <div className="text-center md:text-left">
-          <h2 className="text-2xl font-bold text-accent tracking-tighter mb-2">
+          <h2 className="text-xl font-semibold text-text tracking-tight mb-2">
              Vivek Kushwaha<span className="text-text">.</span>
           </h2>
           <p className="text-muted text-sm max-w-xs leading-relaxed">
@@ -25,7 +25,7 @@ const Footer = () => {
         </div>
 
         {/* Quick Links */}
-        <div className="flex flex-wrap justify-center gap-8 text-sm font-medium">
+        <div className="flex flex-wrap justify-center gap-7 text-sm font-medium">
           <a href="#home" className="text-muted hover:text-accent transition-colors">Home</a>
           <a href="#about" className="text-muted hover:text-accent transition-colors">About</a>
           <a href="#skills" className="text-muted hover:text-accent transition-colors">Skills</a>
@@ -42,7 +42,7 @@ const Footer = () => {
                 <a
                   key={social.name}
                   href={social.url}
-                  className="p-3 bg-accent/5 rounded-xl text-muted hover:text-accent hover:bg-accent/10 transition-all border border-accent/10"
+                  className="p-3 bg-white rounded-lg text-muted hover:text-text hover:border-[#d1d5db] transition-colors border border-[#e5e7eb]"
                   aria-label={social.name}
                 >
                   <Icon size={20} />
@@ -52,7 +52,7 @@ const Footer = () => {
           </div>
           <button
             onClick={scrollToTop}
-            className="p-3 bg-accent text-background rounded-full hover:scale-110 transition-transform shadow-xl group"
+            className="p-3 bg-text text-white rounded-lg hover:bg-black/80 transition-colors group"
             aria-label="Scroll to top"
           >
             <ArrowUp size={20} className="group-hover:-translate-y-1 transition-transform" />
@@ -60,17 +60,15 @@ const Footer = () => {
         </div>
       </div>
 
-      <div className="max-w-7xl mx-auto mt-12 pt-8 border-t border-accent/10 flex flex-col sm:flex-row justify-between items-center gap-4 relative z-10">
+      <div className="max-w-7xl mx-auto mt-12 pt-8 border-t border-[#e5e7eb] flex flex-col sm:flex-row justify-between items-center gap-4">
         <p className="text-muted text-xs font-medium">
           &copy; {currentYear} {developerInfo.name}. All rights reserved.
         </p>
-        <p className="text-muted/50 text-xs">
+        <p className="text-muted/70 text-xs">
           Built with <span className="text-accent">Next.js</span> & <span className="text-accent">Tailwind CSS</span>
         </p>
       </div>
 
-      {/* Decorative Gradient Background */}
-      <div className="absolute bottom-0 left-1/2 -translate-x-1/2 w-full max-w-4xl h-64 bg-accent/5 rounded-[100%] blur-[120px] -mb-32 pointer-events-none" />
     </footer>
   );
 };

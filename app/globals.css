@@ -1,17 +1,20 @@
 @import "tailwindcss";
 
 @theme {
-  --color-background: #0f172a;
-  --color-secondary: #1e293b;
-  --color-accent: #38bdf8;
-  --color-text: #ffffff;
-  --color-muted: #94a3b8 --font-sans: var(--font-geist-sans);
+  --color-background: #ffffff;
+  --color-secondary: #f9fafb;
+  --color-accent: #7c3aed;
+  --color-text: #111827;
+  --color-muted: #6b7280;
+  --font-sans: var(--font-geist-sans);
   --font-mono: var(--font-geist-mono);
 }
 
 :root {
-  --background: #0f172a;
-  --foreground: #ffffff;
+  --background: #ffffff;
+  --foreground: #111827;
+  --surface: #ffffff;
+  --border: #e5e7eb;
 }
 
 * {
@@ -19,57 +22,64 @@
 }
 
 body {
-  background-color: var(--background);
+  background: var(--background);
   color: var(--foreground);
-  font-family:
-    var(--font-sans),
-    ui-sans-serif,
-    system-ui,
-    -apple-system,
-    BlinkMacSystemFont,
-    "Segoe UI",
-    Roboto,
-    "Helvetica Neue",
-    Arial,
-    "Noto Sans",
-    sans-serif;
+ font-family: "Inter", sans-serif;
+  text-rendering: optimizeLegibility;
 }
 
-/* Glassmorphism */
-.glass {
-  background: rgba(30, 41, 59, 0.7);
-  backdrop-filter: blur(12px);
-  -webkit-backdrop-filter: blur(12px);
-  border: 1px solid rgba(255, 255, 255, 0.1);
+::selection {
+  background: #111827;
+  color: #ffffff;
+}
+
+/* Shared light surfaces replace the previous glass treatment. */
+.glass,
+.glass-card {
+  background: #ffffff;
+  border: 1px solid var(--border);
+  box-shadow: 0 1px 2px rgba(17, 17, 17, 0.04);
 }
 
 .glass-card {
-  background: rgba(30, 41, 59, 0.4);
-  backdrop-filter: blur(8px);
-  -webkit-backdrop-filter: blur(8px);
-  border: 1px solid rgba(255, 255, 255, 0.05);
-  transition: all 0.3s ease;
+  transition: border-color 180ms ease, box-shadow 180ms ease,
+    transform 180ms ease;
 }
 
 .glass-card:hover {
-  border: 1px solid rgba(56, 189, 248, 0.3);
-  background: rgba(30, 41, 59, 0.6);
+  border-color: #d1d5db;
+  box-shadow: 0 5px 16px rgba(17, 17, 17, 0.06);
 }
 
-/* Custom Scrollbar */
+:focus-visible {
+  outline: 2px solid #7c3aed;
+  outline-offset: 3px;
+}
+
 ::-webkit-scrollbar {
   width: 8px;
 }
 
 ::-webkit-scrollbar-track {
-  background: #0f172a;
+  background: #ffffff;
 }
 
 ::-webkit-scrollbar-thumb {
-  background: #1e293b;
-  border-radius: 4px;
+  background: #d1d5db;
+  border-radius: 999px;
 }
 
 ::-webkit-scrollbar-thumb:hover {
-  background: #38bdf8;
+  background: #9ca3af;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    scroll-behavior: auto;
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
 }

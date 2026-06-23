@@ -26,7 +26,7 @@ export const aboutInfo = {
     "My journey in tech is driven by curiosity and a commitment to creating efficient, scalable, and user-friendly solutions."
   ],
   stats: [
-    { label: "Projects ", value: "4+" },
+    { label: "Projects ", value: "2+" },
     { label: "Technologies ", value: "10+" },
     { label: "Years Experience", value: "2+" },
   ]
@@ -36,7 +36,7 @@ export const skills = [
   {
     category: "Frontend",
     icon: Layout,
-    items: ["HTML", "CSS", "JavaScript", "TypeScript", "React", "Next.js", "Tailwind CSS"]
+    items: ["HTML", "CSS", "JavaScript",  "React", "Next.js", "Tailwind CSS"]
   },
   {
     category: "Backend",
@@ -64,8 +64,8 @@ export const projects = [
       "/expense-tracker/dashboard.png",
       "/expense-tracker/spendings.png",
       "/expense-tracker/add-expense.png",
-      "/expense-tracker/signup.png",
-      "/expense-tracker/edit.png"
+      "/expense-tracker/edit.png",
+      "/expense-tracker/signup.png"
     ],
     isApp: true
   },
@@ -139,6 +139,6 @@ export const certificates = [
     title: "Sigma Web Development Course",
     issuer: "CodeWithHarry",
     date: "2025",
-    image: "/assets/sigma-cert.png" // Placeholder
+    image: "/assets/sigma-cert.png" 
   }
 ];
