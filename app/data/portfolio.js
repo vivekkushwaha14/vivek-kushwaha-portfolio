@@ -136,7 +136,7 @@ export const timeline = [
 
 export const certificates = [
   {
-    title: "Sigma Web Development Course",
+    title: "Data Science",
     issuer: "CodeWithHarry",
     date: "2025",
     image: "/assets/sigma-cert.png" 
